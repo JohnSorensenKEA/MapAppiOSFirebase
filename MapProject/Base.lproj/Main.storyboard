@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rfg-S5-6sg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="649"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="649" id="b9t-qb-lqr"/>
+                                </constraints>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HF4-le-4nV">
+                                <rect key="frame" x="48" y="723" width="318" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="9sj-st-T3g"/>
+                                    <constraint firstAttribute="height" constant="34" id="gIl-Ry-erS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rfg-S5-6sg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I91-Mx-0IW"/>
+                            <constraint firstItem="HF4-le-4nV" firstAttribute="top" secondItem="rfg-S5-6sg" secondAttribute="bottom" constant="30" id="Lur-06-sLs"/>
+                            <constraint firstItem="rfg-S5-6sg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQ3-GN-nza"/>
+                            <constraint firstItem="rfg-S5-6sg" firstAttribute="centerX" secondItem="HF4-le-4nV" secondAttribute="centerX" id="ZW8-I4-Srd"/>
+                            <constraint firstItem="rfg-S5-6sg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d2J-IE-YBa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="rfg-S5-6sg" id="DMn-HW-6VH"/>
+                        <outlet property="textField" destination="HF4-le-4nV" id="i2z-b7-Y35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
